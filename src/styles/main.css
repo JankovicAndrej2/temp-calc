@@ -1,5 +1,77 @@
-body {
+@font-face {
+    font-family: "Segment14";
+    src: url("../fonts/Segment14.woff2") format("woff2"),
+        url("../fonts/Segment14.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    font-family: "Segment14";
+    color: white;
+    user-select: none;
+}
+body,
+html {
     height: 100vh;
     width: 100vw;
-    background-color: brown;
+    background-color: #212d40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+.calc-box {
+    height: 500px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+    background-color: #1c2535;
+}
+.display {
+    background-color: #0e131b;
+    height: 10%;
+    margin: 30px;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.buttons {
+    height: 80%;
+    margin: 30px;
+    margin-top: 0px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+}
+.buttons > * {
+    background-color: #374c6c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+.button-equal {
+    grid-column-start: 5;
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+.button-no {
+    background-color: #1c2535;
+}
+
+.buttons > *:hover {
+    scale: 110%;
+    cursor: pointer;
+}
+.button-no:hover {
+    scale: 100%;
+    cursor: auto;
 }
